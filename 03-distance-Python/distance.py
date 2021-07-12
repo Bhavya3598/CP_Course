@@ -7,5 +7,5 @@ import math
 def fun_distance(x1, y1, x2, y2):
 	a=int((x2-x1)**2)
 	b=int((y2-y1)**2)
-	temp=int(math.sqrt(a+b))
+	temp=int(math.sqrt(a+b)) #To obtain result in int form we perform typecasting
 	return temp
