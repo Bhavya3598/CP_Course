@@ -7,5 +7,6 @@
 
 
 def show_excitement():
-    # Your code goes here!
-    pass
+    s="I am super excited for this course! "
+    result=5*s
+    return result
