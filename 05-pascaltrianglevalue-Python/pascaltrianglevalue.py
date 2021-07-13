@@ -8,5 +8,17 @@
 
 
 
+import math
 def fun_pascaltrianglevalue(row, col):
-	return 1
+  basic=row-col
+  # flag=False
+  if(basic>=0):
+    basic=math.factorial(basic)
+    a=math.factorial(row)
+    b=math.factorial(col)
+    c=b*(basic)
+    result=a//c
+    return result
+  else:
+    # flag=True
+    return 0
