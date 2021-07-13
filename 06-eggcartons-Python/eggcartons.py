@@ -5,5 +5,14 @@
 
 
 def fun_eggcartons(eggs):
-	# your code goes here
-	return 1
+	hold=12
+	if(eggs==0):
+		return 0
+	elif(eggs<=12):
+		return 1 
+	elif(eggs>12):
+		rem=eggs%12
+		quo=eggs//12
+		result=rem+quo
+		return result
+print(fun_eggcartons(0))
