@@ -7,5 +7,32 @@
 
 
 def fun_set_kth_digit(n, k, d):
-		return 0
-
+	negativee=False
+	con_str=str(n)
+	if(n<0):	
+		con_str=str((abs(n)))
+		negativee=True
+	my_lis=list(map(str,con_str))
+	my_lis.reverse()
+	redu=len(my_lis)-1
+	if(k<=redu):
+		my_lis.pop(k)
+		my_lis.insert(k, d)
+		my_lis.reverse()
+		a=list(map(str,my_lis))
+		result="".join(a)
+		result=int(result)
+		if(negativee==True):
+			return -(result)
+		else:
+			return result
+	else:
+		my_lis.insert(k, d)
+		my_lis.reverse()
+		a=list(map(str,my_lis))
+		result="".join(a)
+		result=int(result)
+		if(negativee==True):
+			return -(result)
+		else:
+			return result
