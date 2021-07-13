@@ -5,7 +5,19 @@
 
 
 
+import math
 def fun_nearestodd(n):
-	return 0
+	temp=int(n)
+	if(temp%2==0):
+		get_round=math.ceil(n)
+		# print(get_round)
+		if(get_round==temp):
+			# get_round=get_round+1
+			get_round=get_round-1
+		return get_round
+	else:
+		return temp
+
+
 
 
