@@ -34,5 +34,59 @@
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
 def playstep2(hand, dice):
-	# your code goes here
-	pass
+	forhand=str(hand)
+	fordice=str(dice)
+	final=[]
+	final1=[]
+	han=list(map(str,forhand))
+	dic=list(map(str,fordice))
+	result1=[]
+	result2=tuple()
+	s=""
+	s1=""
+	s2=""
+	s11=""
+
+	duplicate=set(han)
+	if(len(duplicate)==len(han)):
+		han.sort()
+		larger=han[-1]
+		final.append(larger)
+		add_dic1=dic[-1]
+		final.append(add_dic1)
+		add_dic2=dic[-2]
+		final.append(add_dic2)
+		for j in final:
+			s+=j
+		for k in sorted(s):
+			s1+=k
+		s1=s1[::-1]	
+		o1="".join(final)
+		final=[]
+		rest_dic=dic[0:-2]
+		rest_dic="".join(rest_dic)
+		final.append(s1+','+rest_dic)
+		final=("".join(final))
+		final=final.split(",")
+		res=tuple(list(map(int,final)))
+		return res
+	else:
+		han.sort()
+		smaller=han[-2]
+		final1.append(smaller*2)
+		add_dic1=dic[-1]
+		final1.append(add_dic1)
+		for j in final1:
+			s11+=j
+		for k in sorted(s11):
+			s2+=k
+		s2=s2[::-1]	
+		o2="".join(final1)
+		final1=[]
+		rest_dic=dic[0:-1]
+		rest_dic="".join(rest_dic)
+		final1.append(s2+','+rest_dic)
+		final1=("".join(final1))
+		final1=final1.split(",")
+		res=tuple(list(map(int,final1)))
+		return res
