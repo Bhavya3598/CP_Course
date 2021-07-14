@@ -11,9 +11,19 @@
 # return 0.
 
 def powerSum(n, k):
-    # Your code goes here...
-    return 0
+        calculate=n**k
+        lis=[]
+        if(n<0):
+                return 0
+        elif(k<0):
+                return 0
+        else:
+                for i in range(n+1):
+                        temp=i**k
+                        lis.append(temp)
+                        result=sum(lis)
+                return result
 
-# Write your own test cases here...
 
-print ("All test cases passed...")
+print(powerSum(1999,19))
+print("All test cases passed!")
