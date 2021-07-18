@@ -8,4 +8,23 @@
 
 
 def fun_nearestbusstop(street):
-	return -1
+	lis=[]
+	if(street==0):
+		return 0
+	elif(street>0):
+		for i in range(0,street,8):
+			lis.append(i)
+			last=lis[-1]
+			diff=street-last
+		if(diff<=4):
+			return last
+		elif(diff>=5):
+			return last+8
+		elif(diff==0):
+			return street
+print(fun_nearestbusstop(4))
+
+# (12, 8), (8, 8),
+#     (13, 16), (0, 0),
+#     (5, 8), (16, 16),
+#     (4, 0)
