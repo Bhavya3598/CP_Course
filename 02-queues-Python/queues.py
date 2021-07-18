@@ -6,8 +6,7 @@ Make sure you pass the test cases too!"""
 
 class Queue:
     def __init__(self, head=None):
-        self.storage = [head]
-        
+        self.storage = [head]        
 
 
     def enqueue(self, new_element):
