@@ -12,7 +12,24 @@
 # [ [ 1, 2],
 #   [ 2, 1]]
 # Each row and each column add to 3, but one diagonal adds to 2 and the other to 4.
-
+import numpy as np
 def ismostlymagicsquare(a):
-	# Your code goes here
-	pass
+		lis=[]
+		lis2=[]
+		for i in a:
+			add=sum(i)
+			lis.append(add)
+		b=lis[::-1]
+		d=lis
+		if(b==d):
+			c=np.diagonal(a)
+			check=int(sum(c))
+			if(lis[0]==check):
+				return True
+		else:
+			return False
+
+			
+
+					
+print(ismostlymagicsquare([[16, 3, 2, 13], [5, 10, 11, 8], [9, 6, 7, 12],[4, 15, 14, 1]]))
