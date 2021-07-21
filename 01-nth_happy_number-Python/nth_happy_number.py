@@ -15,5 +15,42 @@
 # assert(nth_happy_number(8) == 31)
 
 
+def splitdigit(n):
+	lis=[]
+	while(n>=1):
+		last=n%10
+		lis.append(last)
+		next=n//10
+		n=next
+	return lis
+
 def nth_happy_number(n):
-	return 0
+	count=0
+	i=1
+	if(n==0):
+		return False
+	while(True):
+		if(ishappynumber(i)):
+			count+=1
+		if(count==n):
+			return i
+		i=i+1
+	
+def ishappynumber(n):	
+	if(n<=0):
+		return False
+	else:
+		while(n!=1):
+			lis1=[]
+			s=splitdigit(n)
+			final=0
+			# print(s)
+			for i in s:
+				c=i**2
+				lis1.append(c)
+				# print(lis1)
+			final=sum(lis1)
+			n=final
+			if(n==4):
+				return False
+		return True
