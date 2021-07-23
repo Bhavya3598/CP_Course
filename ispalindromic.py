@@ -30,10 +30,6 @@ def primenumber(n):
 			if(n%i==0):
 				return False
 		return True
-
-
-
-
 # print(primenumber(131))
 print(isPalindromicPrime(2))
 
