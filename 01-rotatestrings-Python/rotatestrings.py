@@ -21,26 +21,3 @@ def fun_rotatestrings(s, k):
 			s=get_ele+new_s
 		return s
 
-
-
-		# get_org_len=len(s)
-		# req_len=k-get_org_len
-		# for i in s:
-		# 	get_char=s[:req_len]
-		# 	combi=s+get_char
-		# 	output=combi[req_len:]
-		# return output
-		
-
-
-
-	
-
-
-
-# print(fun_rotatestrings("abcd", ))
-
-
-
-# ("abcd", -1, "dabc"), ("abcd", 1,"bcda"),("abcd", -6,"cdab"),
-# ("abcd", 3, "dabc"), ("ac323", 8, "23ac3"),("ac232", 0, "ac232")
