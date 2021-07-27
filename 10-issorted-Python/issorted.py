@@ -5,6 +5,27 @@
 # learn soon, it runs in O(n) time, where n=len(a)), and so in particular you may not sort 
 # the list.
 
-def issorted(a):
-	# your code goes here
-	pass
+def sortedlis(a):
+	lis2=[]
+	copy=a
+	while(a):
+		min=a[0]
+		for i in a:
+			if(i<min):
+				min=i
+		lis2.append(min)
+		a.remove(min)
+	return lis2
+def issorted(n):
+	copy=[]
+	to_rev=[]
+	for i in n:
+		copy.append(i)
+		to_rev.append(i)
+	rev=to_rev.reverse()
+	org=sortedlis(n)
+	if(org==copy):
+		return True
+	elif(org==to_rev):
+		return True
+	return False
