@@ -16,6 +16,11 @@
 #     "I, Tonya" : 1
 # }
 
-def movieAwards(oscarResults):
+def movie_awards(oscarResults):
     # Your code goes here...
-    pass
+    lis=list(oscarResults)
+    dic=dict()
+    for key,value in lis:
+        dic[value]=dic.get(value,0)+1
+
+    return dic
